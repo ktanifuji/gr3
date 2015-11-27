@@ -1,0 +1,932 @@
+/*================================================================ */
+/* reset */
+/*================================================================ */
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, form, fieldset, input, textarea, p, th, td, address {
+  margin: 0;
+  padding: 0;
+  font-style: normal;
+  font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", sans-serif;
+}
+
+ul {
+  list-style: none;
+}
+
+fieldset, img {
+  border: 0;
+  vertical-align: bottom;
+}
+
+select option {
+  padding: 0 5px;
+}
+
+form label {
+  cursor: pointer;
+}
+
+article, aside, dialog, figure, footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+a:link, a:visited {
+  text-decoration: none;
+  color: #1e78ff;
+}
+a:active, a:hover {
+  text-decoration: underline;
+  color: #1e78ff;
+}
+
+/*================================================================ */
+/* common */
+/*================================================================ */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+}
+
+* html div#container {
+  height: 100%;
+  color: black;
+  text-align: center;
+}
+
+/*================================================================ */
+/* $ */
+/*================================================================ */
+/*================================================================
+ *header
+ *================================================================ */
+#header {
+  width: 100%;
+  padding: 15px 0;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.85);
+  border-bottom: 1px solid #dddddd;
+}
+#header h1 {
+  font-family: "Poiret One", cursive;
+  font-size: 140px;
+  line-height: 0.95em;
+}
+#header p {
+  letter-spacing: 12px;
+  font-size: 13px;
+}
+
+/*================================================================ */
+/* container */
+/*================================================================ */
+body {
+  background-image: url(../img/bg_main.gif);
+  background-position: center;
+}
+
+div#container {
+  width: 100%;
+  min-height: 100%;
+  position: relative;
+}
+
+#main {
+  width: 720px;
+  margin: 0 auto;
+}
+
+body > #container {
+  height: auto;
+}
+
+div#main {
+  padding-bottom: 180px;
+  height: 100%;
+}
+
+#index-top {
+  text-align: center;
+  width: 100%;
+  background-image: url(common/img/bg_header.png);
+  background-repeat: repeat-x;
+}
+
+#headlink {
+  background-color: white;
+  font-size: 1.1em;
+}
+
+/*================================================================ */
+/* top */
+/*================================================================ */
+#top {
+  text-align: center;
+  font-size: 13px;
+  margin: 0 auto 13px auto;
+  padding-top: 10px;
+  width: 718px;
+  border: solid #dddddd;
+  border-width: 0px 1px 1px 1px;
+  background: rgba(255, 255, 255, 0.7);
+}
+#top h1 {
+  margin: 0 auto 13px auto;
+  color: white;
+  background: black;
+  width: 640px;
+}
+#top #headlink ul {
+  background: white;
+}
+#top #headlink ul li {
+  display: inline;
+  margin: 0 0 0 15px;
+  font-size: 15px;
+}
+#top #headlink ul li.no-open {
+  color: #cccccc;
+}
+#top #info {
+  margin: 0 auto 10px auto;
+  padding: 10px;
+  text-align: left;
+  width: 520px;
+  color: #999999;
+}
+#top #info h2 {
+  text-align: center;
+  margin: 0 0 10px 0;
+}
+#top #info dl {
+  border-left: 5px solid #888888;
+}
+#top #info dt {
+  font-size: 12px;
+  color: white;
+  background-color: #888888;
+}
+#top #info dd {
+  font-size: 12px;
+  padding: 2px 2px 4px 8px;
+}
+
+/*================================================================ */
+/* content */
+/*================================================================ */
+#poster {
+  width: 658px;
+  margin: 20px 0;
+  padding: 30px;
+  background: rgba(255, 255, 255, 0.7);
+  border: 1px solid #dddddd;
+}
+#poster h2 {
+  font-size: 1.3em;
+  font-weight: bold;
+  letter-spacing: 0.1em;
+}
+#poster p.intro {
+  margin: 0 0 60px 0;
+}
+#poster span {
+  font-size: 0.9em;
+  font-style: italic;
+}
+#poster span.sub {
+  font-size: 0.85em;
+}
+
+#event-detail {
+  width: 718px;
+  margin: 20px 0;
+  padding: 20px 0;
+  background: rgba(255, 255, 255, 0.7);
+  border: 1px solid #dddddd;
+}
+#event-detail .rule_link {
+  font-size: 0.8em;
+  text-align: right;
+  margin: 0 20px 0 0;
+}
+
+.box {
+  clear: both;
+  overflow: hidden;
+  margin: 0 0 20px 0;
+}
+.box h2 {
+  text-align: center;
+}
+.box p {
+  text-align: center;
+  font-size: 12px;
+  margin: 0 0 17px 0;
+}
+.box table {
+  margin: 0 0 0 20px;
+}
+.box table th {
+  width: 100px;
+  font-size: 0.7em;
+  text-align: left;
+}
+.box .send-button {
+  margin: 10px 0;
+  text-align: center;
+}
+.box .send-button button {
+  padding: 5px 100px;
+}
+.box .regi-login {
+  text-align: right;
+}
+.box .box-left {
+  float: left;
+  width: 328px;
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.7);
+  border: 1px solid #dddddd;
+}
+.box .box-right {
+  float: right;
+  width: 328px;
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.7);
+  border: 1px solid #dddddd;
+}
+.box .box-left-info {
+  float: left;
+  width: 330px;
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.7);
+}
+.box .box-right-info {
+  float: right;
+  width: 330px;
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.7);
+}
+.box .box-right-info h2, .box .box-left-info h2 {
+  margin: 0 0 10px 0;
+}
+.box .box-right-info span a, .box .box-left-info span a {
+  color: #1e78ff;
+  text-decoration: underline;
+  margin: 0 3px 0 0;
+}
+.box .box-right-info span a:hover, .box .box-left-info span a:hover {
+  text-decoration: none;
+}
+.box .box-right-info p, .box .box-left-info p {
+  line-height: 20px;
+}
+.box p.attension {
+  margin: 15px 0 15px 20px;
+  color: red;
+  font-size: 10px;
+  text-align: left;
+  line-height: 12px;
+}
+
+#regist-form {
+  margin-left: 20px;
+  text-align: left;
+  font-size: 0.9em;
+}
+#regist-form td {
+  border: 1px solid #dddddd;
+  padding: 4px;
+  font-size: 12px;
+}
+#regist-form th {
+  border: none;
+  background-color: #eeeeee;
+  width: auto;
+  padding: 2px 5px 2px 5px;
+  font-weight: normal;
+  width: 110px;
+  font-size: 12px;
+}
+#regist-form button {
+  padding: 3px 24px;
+}
+#regist-form p.attention {
+  margin: 2px 0 0 0;
+  color: #ff4242;
+  font-size: 11px;
+}
+#regist-form .regbot {
+  margin: 20px 0 0 0;
+}
+#regist-form .regbot button {
+  width: 200px;
+  height: 40px;
+}
+
+select, input {
+}
+
+/*================================================================ */
+/* subpade */
+/*================================================================ */
+body#sub #header {
+  margin: 0 0 30px 0;
+  width: 100%;
+  height: 60px;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.85);
+}
+body#sub #header h1 {
+  padding: 10px 0;
+  text-align: center;
+  font-size: 1.7em;
+}
+
+/*================================================================
+list
+================================================================*/
+
+#list {
+	text-align	:	center;
+	font-size	:	13px;
+	margin		:	13px auto 13px auto;
+	width		:	720px;
+	border		:	solid #000000 ;
+	border-width:	1px;
+	background-color: #FFF;
+}
+
+#list .seed{
+	border-color		:	#1e78ff;
+}
+
+#list .king{
+	background-image: url(img/crown.png);
+	background-repeat:   no-repeat;
+	background-position: center;
+}
+
+#list .seedking{
+	border-color		:	#1e78ff;
+	background-image: url(img/crown.png);
+	background-repeat:   no-repeat;
+	background-position: center;
+}
+
+#list table{
+	width		:	620px;
+	margin		:	13px auto 13px auto;
+}
+
+#list td{
+	border		:	solid #000000;
+	border-width:	3px;
+	padding		:	6px;
+}
+#list th{
+	border		:	solid #000000;
+	border-width:	1px;
+	padding		:	6px;
+	width	:	90px;
+	font-size	:	30px;
+	font-family	:	Arial;
+}
+
+#list span.point{
+	font-size: 1em;
+	color: #ff0000;
+}
+
+#list span.bluepoint{
+	font-size: 1em;
+	color: #0000ff;
+}
+
+#list span.impre{
+	font-size: 0.8em;
+}
+
+#list span.blueimpre{
+	font-size: 1em;
+	color: #0000ff;
+}
+
+#list span.lastimpre{
+	font-size: 0.7em;
+	line-height: 90%;
+}
+
+#list span.hatena{
+	font-size: 1em;;
+}
+
+#list span.bluehatena{
+	font-size: 0.8em;
+	color: #0000ff;
+}
+
+#list p{
+	text-align:center;
+}
+
+#list p.genre{
+	font-weight:bold;
+}
+
+#list p.title{
+	font-size: 1.4em;
+	font-weight: bold;
+}
+
+#banner {
+	text-align	:	center;
+	font-size	:	13px;
+	margin		:	13px auto 13px auto;
+	padding: 20px 0;
+	width		:	720px;
+	border		:	solid #000000 ;
+	border-width:	1px;
+	background-color: #FFF;
+}
+#banner p {
+	font-size: 1.3em;
+	margin: 0 0 7px 0;
+	padding: 0 0 7px 0;
+	border-bottom: 1px solid #DDD;
+}
+
+#list.dllist{
+	width: 100%;
+	background: none;
+	border: none;
+}
+
+#list.dllist table td,th,tr{
+	text-align	:	left;
+	border: 2px solid #000;
+}
+
+#list.dllist table{
+	width: 100%;
+	margin: 10px;
+	background-color: #FFF;
+}
+
+#list.dllist table th{
+	font-size: 12px;
+	width: 100px;
+	border: 2px solid #000;
+}
+
+#list.dllist table td{
+	word-break: break-all;
+	width: 100px;
+	border: 1px solid #000;
+}
+
+#list.dllist table td.seed{
+	border-color		:	#1e78ff;
+}
+
+/*================================================================
+bms
+================================================================*/
+
+#header.bms{
+	padding		:	15px 0 10px 0;
+	text-align	:	center;
+	width		:	100%;
+	color		:	#666;
+	background: rgba(255, 255, 255, 0.85);
+}
+
+#header p.bms-genre {
+	font-family: Verdana,Arial, Helvetica, sans-serif;
+	font-size: 1.5em;
+	letter-spacing: 2px;
+	color: #EEE;
+}
+
+#header p.bms-title {
+	font-family: Verdana,Arial, Helvetica, sans-serif;
+	padding: 5px 0 3px 0;
+	font-size: 2em;
+	letter-spacing: 1px;
+}
+
+#header p.bms-artist {
+	font-family: 'Hiragino Kaku Gothic Pro','Osaka','MS P Gothic', Verdana,Arial, Helvetica, sans-serif;
+	font-size: 1.2em;
+	letter-spacing: 2px;
+}
+
+#bmssub {
+	text-align	:	left;
+	font-size	:	13px;
+	margin		:	0 auto 25px auto;
+	width		:	650px;
+	border		:	solid #000000 ;
+	border-width:	0px 1px 1px 1px;
+	background-color: #FFF;
+}
+
+#bmssub h3{
+	font-size	:	13px;
+	margin	:	0px 26px;
+	padding	:	6px;
+}
+
+#bmssub #box{
+	border		:	solid #000000 ;
+	width	:	570px;
+	margin	:	0 auto;
+	padding	:	6px;
+	border-width:	1px;
+}
+
+#bmssub #login{
+	margin: 5px 5px;
+	text-align	:	right;
+}
+
+#bmssub button{
+	background:#000000;
+	color:#FFFFFF;
+	padding		:	2px 2px;
+}
+
+p.comment-update{
+	padding-left: 10px;
+	font-style: italic;
+	color: #888;
+}
+
+
+/*================================================================
+vote
+================================================================*/
+
+#vote{
+	font-size	:	13px;
+	margin		:	13px auto;
+	width		:	520px;
+}
+
+#vote h2{
+	text-align	:	center;
+}
+
+#vote h3{
+	padding: 5px 0 0 7px;
+	font-size	:	1.2em;
+}
+
+#vote p.info{
+	padding: 2px 0 0 9px;
+	font-size: 0.95em;
+	font-weight: normal;
+}
+
+#vote p{
+	padding: 2px 0 0 0;
+	font-weight: bold;
+}
+
+#vote #voteform{
+	border		:	solid #000000 ;
+	border-width:	1px;
+	font-size	:	13px;
+	margin	:	6px 24px;
+	padding		:	6px;
+	background-color: #FFF;
+}
+
+#vote #form_nakami{
+	margin		:	6px 12px;
+}
+
+#vote #form_nakami span.point1-3{
+	font-weight: bold;
+	padding:0 0 0 0;
+}
+
+#vote #form_nakami span.point1-5{
+	font-weight: bold;
+	padding:0 0 0 10px;
+}
+
+#vote button{
+	background:#000000;
+	color:#FFFFFF;
+	padding		:	3px 24px;
+}
+
+
+/*================================================================
+comment
+================================================================*/
+
+#comment{
+	border		:	solid #000000 ;
+	border-width:	1px;
+	margin		:	13px auto;
+	width		:	720px;
+	background-color: #FFF;
+}
+
+#comment table{
+	width		:	640px;
+	margin		:	13px auto;
+}
+
+#comment td{
+	border		:	solid #000000;
+	border-width:	1px;
+	padding		:	6px;
+}
+#comment th{
+	border		:	solid #000000;
+	border-width:	1px;
+	padding		:	6px;
+	width		:	150px;
+}
+#comment th #star{
+	color	:	#CCCC00;
+}
+#comment th span.point{
+	font-size: 1.5em;
+}
+
+#comment p{
+	font-size: 0.9em;
+}
+
+#comment p.vote-day{
+	text-align:	right;
+	font-size:	0.7em;
+	color:		#AAA;
+}
+
+#comment td.append{
+  padding: 0;
+  width: 72px;
+  height: 52px;	
+	text-align	:	center;
+	font-size: 0.7em;
+}
+#comment td.append a{
+  display: block;
+}
+
+/*================================================================
+result
+================================================================*/
+
+#results{
+	margin: 10px 0 10px 30px;
+	text-align: left;
+	font-size: 0.9em;
+}
+
+#results .box{
+	padding-bottom: 40px;
+}
+
+#results h2{
+	padding: 2px 0 0 4px;
+	margin-bottom: 13px;
+	border-bottom: 1px solid #333;
+	border-left: 10px solid #333;
+	text-align: left;
+	letter-spacing: 0.2em;
+}
+
+#results p{
+	padding: 0 0 0 15px;
+	letter-spacing: 0.07em;
+	text-align: left;
+}
+
+#results ul{
+	padding: 0 0 0 30px;
+	letter-spacing: 0.07em;
+	text-align: left;
+	list-style: square;
+}
+
+#results .box td,th{
+	padding: 5px;
+}
+
+#results .box .bold{
+	font-weight: bold;
+}
+
+
+/*================================================================ */
+/* content */
+/*================================================================ */
+#event-detail {
+  width: 718px;
+  margin: 20px 0;
+  padding: 20px 0;
+  background: rgba(255, 255, 255, 0.7);
+  border: 1px solid #dddddd; }
+  #event-detail #h_link p {
+    text-align: center;
+    font-size: 1em;
+    text-align: right;
+    margin: 10px 0; }
+
+.box {
+  clear: both;
+  overflow: hidden;
+  margin: 0 0 20px 0; }
+  .box h2 {
+    margin: 0 0 10px 0;
+    text-align: center; }
+  .box p {
+    text-align: center;
+    font-size: 0.8em;
+    margin: 0 0 20px 0; }
+  .box input {
+    height: 1em;
+    width: 14em; }
+  .box table {
+    margin: 0 0 0 10px; }
+    .box table tr {
+      line-height: 1em; }
+    .box table th {
+      width: 120px;
+      font-size: 0.7em;
+      text-align: left; }
+  .box .send-button {
+    margin: 10px 0 20px 0;
+    text-align: center; }
+    .box .send-button button {
+      padding: 5px 100px; }
+  .box .regi-login {
+    text-align: right; }
+  .box .box-left {
+    float: left;
+    width: 328px;
+    height: 258px;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.7);
+    border: 1px solid #dddddd; }
+    .box .box-left .form-txt {
+      height: 110px; }
+  .box .box-right {
+    float: right;
+    width: 328px;
+    height: 258px;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.7);
+    border: 1px solid #dddddd; }
+    .box .box-right p.attension {
+      margin: 15px 0 15px 0;
+      color: red;
+      font-size: 0.6em; }
+    .box .box-right .form-txt {
+      height: 110px; }
+  .box .box-left-info {
+    float: left;
+    width: 330px;
+    height: 300px;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.7); }
+  .box .box-right-info {
+    float: right;
+    width: 330px;
+    height: 300px;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.7); }
+
+#regist-form {
+  margin-left: 20px;
+  text-align: left;
+  font-size: 0.9em; }
+  #regist-form td {
+    border: 1px solid #dddddd;
+    padding: 4px; }
+  #regist-form th {
+    border: none;
+    background-color: #eeeeee;
+    width: auto;
+    padding: 2px 5px 2px 0;
+    font-weight: normal; }
+  #regist-form button {
+    padding: 3px 24px; }
+
+/*================================================================ */
+/* box_detail */
+/*================================================================ */
+.box p span.word {
+  margin: 0 10px 0 0;
+  font-size: 1.1em; }
+  .box p span.word a {
+  color: #1e78ff; }
+
+
+/*================================================================ */
+/* rule */
+/*================================================================ */
+.rule, .result {
+  margin: 10px 0 10px 30px;
+  text-align: left;
+  font-size: 0.9em;
+}
+.rule .box, .result .box {
+  padding-bottom: 20px;
+}
+.rule h2, .result h2 {
+  padding: 2px 0 0 7px;
+  margin-bottom: 13px;
+  border-bottom: 1px solid #333333;
+  border-left: 10px solid #333333;
+  text-align: left;
+  letter-spacing: 0.2em;
+}
+.rule p, .result p {
+  padding: 0 0 0 20px;
+  margin: 0 0 20px 0;
+  font-size: 13px;
+  letter-spacing: 0.07em;
+  text-align: left;
+}
+.rule span {
+  display: block;
+  font-size: 12px;
+  color: red;
+}
+.rule ul {
+  padding: 0 0 0 30px;
+  letter-spacing: 0.07em;
+  text-align: left;
+  list-style: square;
+}
+.rule ul li {
+  margin: 6px 0;
+  line-height: 17px;
+}
+.rule table {
+  width: 100%;
+}
+.rule table tr th {
+  padding: 0 0 0 5px;
+  border-left: 1px solid #aaaaaa;
+  border-bottom: 1px solid #aaaaaa;
+}
+.rule table tr th.schedule {
+  width: 200px;
+  font-size: 0.9em;
+}
+.rule table tr th.detail {
+  width: 20px;
+  font-size: 0.9em;
+}
+.rule table tr td {
+  padding: 0 0 0 5px;
+  border-left: 1px solid #aaaaaa;
+  border-bottom: 1px solid #aaaaaa;
+  line-height: 16px;
+  font-size: 13px;
+}
+
+.result table td {
+  padding: 4px;
+  border-bottom: 1px solid #666;
+}
+.result table td.s0 {
+  width: 7%;
+  font-weight: bold;
+  padding: 10px 4px;
+}
+.result table td.s1 {
+  width: 31%;
+  font-weight: bold;
+}
+.result table tr.top {
+  color: red;
+}
+
+/*================================================================ */
+/* footer */
+/*================================================================ */
+#footer {
+  clear: both;
+  position: absolute;
+  text-align: center;
+  bottom: 0px;
+  width: 100%;
+  height: 100px;
+  background: rgba(255, 255, 255, 0.9);
+  border-top: 1px solid #dddddd;
+  padding: 20px 0 0 0;
+}
+#footer p {
+  font-size: 12px;
+}
