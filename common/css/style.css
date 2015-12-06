@@ -73,6 +73,7 @@ html, body {
   font-family: "Poiret One", cursive;
   font-size: 140px;
   line-height: 0.95em;
+  margin-bottom: 15px;
 }
 #header p {
   letter-spacing: 12px;
@@ -199,6 +200,20 @@ div#main {
   font-size: 0.85em;
 }
 
+#youtube{
+  margin: 0 0 20px 0;
+  line-height: 0;
+}
+#youtube .noauto{
+  display: none;
+}
+#youtube.cookie .noauto{
+  display: block;
+}
+#youtube.cookie .auto{
+  display: none;
+}
+
 #event-detail {
   width: 718px;
   margin: 20px 0;
@@ -226,19 +241,12 @@ div#main {
   margin: 0 0 17px 0;
 }
 .box table {
-  margin: 0 0 0 20px;
+  width: 100%;
 }
 .box table th {
   width: 100px;
   font-size: 0.7em;
   text-align: left;
-}
-.box .send-button {
-  margin: 10px 0;
-  text-align: center;
-}
-.box .send-button button {
-  padding: 5px 100px;
 }
 .box .regi-login {
   text-align: right;
@@ -284,7 +292,7 @@ div#main {
   line-height: 20px;
 }
 .box p.attension {
-  margin: 15px 0 15px 20px;
+  margin: 15px 0 0 0;
   color: red;
   font-size: 10px;
   text-align: left;
@@ -333,16 +341,17 @@ select, input {
 /* subpade */
 /*================================================================ */
 body#sub #header {
-  margin: 0 0 30px 0;
   width: 100%;
-  height: 60px;
+  padding: 20px 0;
   text-align: center;
   background: rgba(255, 255, 255, 0.85);
 }
 body#sub #header h1 {
-  padding: 10px 0;
+  margin: 0;
+  padding: 0;
   text-align: center;
   font-size: 1.7em;
+  font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", sans-serif;
 }
 
 /*================================================================
@@ -464,7 +473,7 @@ list
 	border: none;
 }
 
-#list.dllist table td,th,tr{
+#list.dllist table td{
 	text-align	:	left;
 	border: 2px solid #000;
 }
@@ -717,7 +726,7 @@ result
 	list-style: square;
 }
 
-#results .box td,th{
+#results .box td{
 	padding: 5px;
 }
 
@@ -746,7 +755,7 @@ result
   overflow: hidden;
   margin: 0 0 20px 0; }
   .box h2 {
-    margin: 0 0 10px 0;
+    margin: 0 0 20px 0;
     text-align: center; }
   .box p {
     text-align: center;
@@ -754,55 +763,63 @@ result
     margin: 0 0 20px 0; }
   .box input {
     height: 1em;
-    width: 14em; }
+    width: 100%; }
   .box table {
-    margin: 0 0 0 10px; }
+     }
     .box table tr {
       line-height: 1em; }
     .box table th {
-      width: 120px;
+      width: 130px;
       font-size: 0.7em;
-      text-align: left; }
+      text-align: left;
+      box-sizing: border-box; }
+    .box table td input{
+      height: 100%;
+      font-size: 0.7em;
+      padding: 0 5px;
+      box-sizing: border-box;
+    }
   .box .send-button {
-    margin: 10px 0 20px 0;
+    margin: 10px 0 0 0;
     text-align: center; }
     .box .send-button button {
       padding: 5px 100px; }
+    .box .send-button input{
+      font-size: 3em;
+    }
   .box .regi-login {
     text-align: right; }
+  .box .form-txt span{
+    color: red;
+  }
   .box .box-left {
     float: left;
-    width: 328px;
-    height: 258px;
-    padding: 10px;
+    width: 350px;
+    padding: 10px 15px 20px 15px;
+    box-sizing: border-box;
     background: rgba(255, 255, 255, 0.7);
     border: 1px solid #dddddd; }
     .box .box-left .form-txt {
-      height: 110px; }
+      height: 170px; }
   .box .box-right {
     float: right;
-    width: 328px;
-    height: 258px;
-    padding: 10px;
+    width: 350px;
+    padding: 10px 15px 20px 15px;
+    box-sizing: border-box;
     background: rgba(255, 255, 255, 0.7);
     border: 1px solid #dddddd; }
-    .box .box-right p.attension {
-      margin: 15px 0 15px 0;
-      color: red;
-      font-size: 0.6em; }
     .box .box-right .form-txt {
-      height: 110px; }
+      height: 170px; }
   .box .box-left-info {
     float: left;
     width: 330px;
-    height: 300px;
+    min-height: 100px;
     padding: 10px;
     background: rgba(255, 255, 255, 0.7); }
   .box .box-right-info {
     float: right;
     width: 330px;
-    height: 300px;
-    padding: 10px;
+    min-height: 100px;
     background: rgba(255, 255, 255, 0.7); }
 
 #regist-form {
@@ -852,7 +869,7 @@ result
 }
 .rule p, .result p {
   padding: 0 0 0 20px;
-  margin: 0 0 20px 0;
+  margin: 0 0 10px 0;
   font-size: 13px;
   letter-spacing: 0.07em;
   text-align: left;
@@ -870,7 +887,9 @@ result
 }
 .rule ul li {
   margin: 6px 0;
-  line-height: 17px;
+  line-height: 20px;
+  letter-spacing: 0.07em;
+  font-size: 13px;
 }
 .rule table {
   width: 100%;

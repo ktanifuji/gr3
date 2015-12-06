@@ -1,7 +1,7 @@
-<?php /* Smarty version 2.6.28, created on 2015-11-23 00:12:01
+<?php /* Smarty version 2.6.28, created on 2015-12-06 23:45:01
          compiled from preindex.tpl */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
-smarty_core_load_plugins(array('plugins' => array(array('modifier', 'escape', 'preindex.tpl', 95, false),array('modifier', 'truncate', 'preindex.tpl', 130, false),)), $this); ?>
+smarty_core_load_plugins(array('plugins' => array(array('modifier', 'escape', 'preindex.tpl', 91, false),array('modifier', 'truncate', 'preindex.tpl', 127, false),)), $this); ?>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
 <html lang="ja">
     <head>
@@ -14,8 +14,6 @@ smarty_core_load_plugins(array('plugins' => array(array('modifier', 'escape', 'p
         <link rel="stylesheet" type="text/css" href="js/popup.css">
         <link href='http://fonts.googleapis.com/css?family=Allerta+Stencil' rel='stylesheet' type='text/css'>
         <link href='http://fonts.googleapis.com/css?family=Arvo:regular,bold' rel='stylesheet' type='text/css'>
-        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
-        <script type="text/javascript" src="js/popup.js"></script>
         <link href='http://fonts.googleapis.com/css?family=Poiret+One|Comfortaa|Nova+Square' rel='stylesheet' type='text/css'>
         <!--[if lt IE 9]>
         <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -24,67 +22,65 @@ smarty_core_load_plugins(array('plugins' => array(array('modifier', 'escape', 'p
 
     <body>
         <div id="header"> 
-            <h1>GENRE SHUFFLE 3</h1>
-            <p>ジャンル・シャッフル</p>
+            <h1><img src="./img/gs3logo.svg" width="658" alt="GENRE-SHUFFLE 3" /></h1>
+            <p>ジャンル・シャッフル３</p>
         </div> <!-- header -->
 
         <div id="container">
+
             <div id="main">
-
                 <div id="top">
-
                     <div id="headlink">
                         <ul>
                             <li><a href="rule.html" target="_blank">イベントルール</a></li>
-                            <li><a href="https://docs.google.com/spreadsheet/ccc?key=0Au0EUedIt6gEdDVGY0VaRVRpVHh6RnlZcW1UNGJCQUE" target="_blank">ジャンル振り分け表</a></li>
+                            <li class="no-open">ジャンル振り分け表</li>
                             <li class="no-open">作品登録フォーム</li>
                     </div>
-
                     <div id="info">
                         <?php echo $this->_tpl_vars['info_message']; ?>
 
                     </div><!-- info -->
                 </div><!-- top -->
+                
+                <div id="youtube">
+                  <iframe class="auto" width="720" height="405" src="https://www.youtube.com/embed/PhOCdW9_JIo?rel=0&amp;autoplay=1&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+                  <iframe class="noauto" width="720" height="405" src="https://www.youtube.com/embed/PhOCdW9_JIo?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+                </div>
 
                 <div id="poster">
-                    <img src="./img/poster.png" width="658" height="598" />
+                    <img src="./img/poster.png" width="658" />
                 </div>
 
                 <div class="box">
                     <div class="box-left">
-                        <h2>参加表明</h2>
-                        <p>イベントの参加登録は、こちらのフォームからどうぞ。</p>
-
+                        <h2>作品参加表明フォーム</h2>
                         <form action="entry/entry/" method="POST">
                             <div class="form-txt">
                                 <table>
-                                    <tr><th>名前</th><td><input type=text name="artist"></td></tr>
-                                    <tr><th>Mail (任意)</th><td><input type=text name="email"></td></tr>
-                                    <tr><th>TwitterID (任意)</th><td><input type=text name="twitter_id" value="@"></td></tr>
-                                    <tr><th>サイトURL (任意)</th><td><input type=text name="site_url" value="http://"></td></tr>
-                                    <tr><th>パスワード</th><td><input type=password name="password" size=8></td></tr>
+                                    <tr><th>名前 <span>*</span></th><td><input type=text name="artist"></td></tr>
+                                    <tr><th>Mail</th><td><input type=text name="email"></td></tr>
+                                    <tr><th>TwitterID</th><td><input type=text name="twitter_id" value="@"></td></tr>
+                                    <tr><th>サイトURL</th><td><input type=text name="site_url" value="http://"></td></tr>
+                                    <tr><th>作品登録パスワード <span>*</span></th><td><input type=password name="password" size=8></td></tr>
                                 </table>
-                                <p class="attension">※パスワードは作品登録/投票の際に必要となります。<br />※パスワードは4桁の数字を入力してください。</p>
+                                <p class="attension">※<span>*</span>印は必須項目です<br />※パスワードは作品登録に必須のため必ず手元に控えてください<br />※パスワードは4桁の数字を入力してください</p>
                             </div>
-
                             <div class="send-button">
                                 <input type="submit" name="mode" value="参加表明">
                             </div>
                         </form>
                     </div>
                     <div class="box-right">
-                        <h2>ジャンル応募</h2>
-                        <p>ジャンル名の応募は、こちらのフォームからどうぞ。</p>
+                        <h2>ジャンル応募フォーム</h2>
                         <form action="genre/entry" method="POST">
                             <div class="form-txt">
                                 <table>
                                     <tr><th>名前</th><td><input type=text name="name" size=30></td></tr>
                                     <tr><th>TwitterID</th><td><input type=text name="twitter_id" size=30 value="@"></td></tr>
-                                    <tr><th>ジャンル名</th><td><input type=text name="genre" size=30></td></tr>
+                                    <tr><th>ジャンル名 <span>*</span></th><td><input type=text name="genre" size=30></td></tr>
                                 </table>
-                                <p class="attension">※名前とTwitterIDは両方入力する必要はありません。<br />※楽曲が実在するジャンル名で応募してください。<br />※ジャンルの投稿は1人1つまでとなります。</p>
+                                <p class="attension">※<span>*</span>印は必須項目です<br />※名前とTwitterIDは両方入力する必要はありません<br />※実在のジャンル名で応募してください<br />※ジャンルの投稿は1人1つまでとなります</p>
                             </div>
-
                             <div class="send-button">
                                 <input type="submit" name="mode" value="投稿">
                             </div>
@@ -158,6 +154,7 @@ $this->_sections['entry_no']['last']       = ($this->_sections['entry_no']['iter
                         </p>
                     </div>
                 </div><!-- info -->
+
             </div>
 
             <div id="footer">
@@ -258,5 +255,9 @@ $this->_sections['genre_no']['last']       = ($this->_sections['genre_no']['iter
                 </p>
             </div>
         <?php endfor; endif; ?>
+        <script type="text/javascript" src="js/jquery-1.9.0.min.js"></script>
+        <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+        <script type="text/javascript" src="js/top.js"></script>
+        <script type="text/javascript" src="js/popup.js"></script>
     </body> 
 </html>
